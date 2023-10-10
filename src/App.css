@@ -1,0 +1,98 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--dark-blue);
+    padding: 1em;
+    box-sizing: border-box;
+
+    & .card_advice-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--dark-grayish-blue);
+        width: 85%;
+        padding: 2em 2em;
+        border-radius: 1em;
+        margin-top: 7em;
+        position: relative;
+
+        & .advice-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2em;
+
+            & .title_advice-container {
+                font-size: .7em;
+                text-transform: uppercase;
+                color: var(--neon-green);
+                letter-spacing: 3px;
+            }
+
+            & .phrase_advice-container {
+                color: var(--light-cyan);
+                font-size: 1.3em;
+                line-height: 1.4em;
+                text-align: center;
+            }
+        }
+
+        & .image_divider-container {
+            margin: 2.5em 0;
+            width: 100%;
+        }
+
+        & .btn_advice-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            border: none;
+            outline: none;
+            background-color: var(--neon-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: -30px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        & .btn_advice-container:hover {
+            box-shadow: 0px 0px 15px 5px var(--neon-green)
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        align-items: center;
+
+        & .card_advice-container {
+            width: 40%;
+            margin: 0;
+
+            & .advice-container {
+
+                & .title_advice-container {
+                    font-size: .8em;
+                }
+
+                & .phrase_advice-container {
+                    font-size: 1.3em;
+                }
+            }
+
+            & .btn_advice-container {
+                height: 80px;
+                width: 80px;
+                bottom: -35px;
+            }
+        }
+    }
+}
